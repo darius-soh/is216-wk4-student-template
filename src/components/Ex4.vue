@@ -8,6 +8,7 @@
     const blueBtn = ref(true)
 
     // part 2
+    const id2 = ref('demo2')
     const activeColor = ref('red')
     const redBtn = ref(true)
 
@@ -50,8 +51,8 @@
     
 
     <div id="part2">
-        <div :style="{color: activeColor}">
-            div ID : {{id}} 
+        <div :id="id2" :style="{color: activeColor}">
+            div ID : {{id2}} 
         </div>
        
         <button v-bind:class="{'btn-primary': !redBtn, 'btn-danger': redBtn}" type="button" v-on:click="changeTextColor">Change Text Color</button> 
